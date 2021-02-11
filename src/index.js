@@ -18,9 +18,9 @@ class Main extends React.Component{
     return (
       <Router>
         <div className="wrapper">
-          <Header/> 
+          <Header/>
+          <Route exact path="/"  component = {MainPoke} /> 
           <Switch>
-            <Route exact path="/"  component = {MainPoke} />
             <Route  exact path="/:id"  component ={(props) => <Type  key={window.location.hash}  {...props} />}/>
             <Route exact path={["/pokemon/:id"]}  component ={Detail} />
           </Switch>
