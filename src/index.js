@@ -7,7 +7,7 @@ import Header from './Components/Header'
 import Type from './Components/Type'
 import  './css/main.css';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link
