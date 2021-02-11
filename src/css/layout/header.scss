@@ -1,0 +1,90 @@
+.header{
+    background-color: #d3d3d3;
+    background-image: linear-gradient(315deg, #d3d3d3 0%, #ee5253 74%);    
+    position: fixed;
+    max-width: 1920px;
+    z-index: 999;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    &__content{
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        &-logo{
+            display: flex;
+            align-items: center;
+            font-family: $game;
+            color: $nameColor;
+            font-size: 18px;
+            img{
+                margin-right: 10px;
+                width: 40px;
+            }
+        }
+
+        &-item{
+            cursor: pointer;
+            span{
+                font-family: $game;
+                margin-left: 20px;
+                color: $nameColor;
+                font-size: 18px;
+                transition: all ease-in-out 0.2s;
+                &:hover{
+                    color: #4d4b49;
+                }
+            }
+            .subMenu{
+                transition: all ease-in-out 0.4s;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 56px;
+                padding-right: 56px;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                z-index: 995;
+                background: rgba(48, 47, 47,0.9);
+                width: 100%;
+                margin: auto;
+                top: 100%;
+                left: 0;
+                right: 0;
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                li{
+                    padding: 10px;
+                }
+                .link{
+                    font-size: 16px;
+                    font-family: $game;
+                    color: $nameColor;
+                    transition: all ease-in-out 0.2s;
+                    &:hover{
+                        color: #ee5253;
+                    }
+                }
+            }
+            &:hover .subMenu{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &-menu{
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        &-link{
+            transition: all ease-in-out 0.2s;
+            &:hover{
+                color: #4d4b49;
+            }
+            font-family: $game;
+            color: $nameColor;
+        }
+    }
+}

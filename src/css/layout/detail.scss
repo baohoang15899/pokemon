@@ -1,0 +1,237 @@
+.PokeDetail{
+    @extend .pokemon;
+    &__content{
+        padding-top: 230px;
+        padding-bottom: 50px;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        column-gap: 40px;
+        &-left{
+            position: relative;
+            padding: 40px 20px;
+            background-color: rgb(235, 227, 227);
+            border-radius: 4px;
+            box-shadow: 0 0 5px 0px rgb(212, 210, 210);
+            display: flex;
+            flex-direction: column;
+            color:rgb(61, 60, 60);
+            font-size: 18px;
+            font-family: $game;
+            &.red{
+                background-color: #fc9842;
+                background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+            }
+            &.gray{
+                background: linear-gradient(to right, #a6aab0 0%, #747272 100%);
+            }
+            &.pink{
+                background-color: #e899dc;
+                background-image: linear-gradient(315deg, #e899dc 0%, #d387ab 74%);                
+            }
+            &.black{
+                color:$nameColor;
+                background-color: #485461;
+                background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);                
+            }
+            &.green{
+                background-color: #70b2d9;
+                background-image: linear-gradient(315deg, #70b2d9 0%, #39e5b6 74%);
+            }
+            &.blue{
+                background-color: #045de9;
+                background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+            }
+            &.yellow{
+                background-color: #fbb034;
+                background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+            }
+            &.brown{
+                background-color: #772f1a;
+                background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);                
+            }
+            &.purple{
+                background-color: #2b1331;
+                background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%);
+            }
+        }
+        &-img{
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 300px;
+        }
+        &-name{
+            padding-top: 80px;
+            text-align: center;
+            margin: 20px 0px;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        &-right{
+            font-size: 18px;
+            padding: 40px 20px;
+            background-color: rgb(235, 227, 227);
+            border-radius: 4px;
+            box-shadow: 0 0 5px 0px rgb(212, 210, 210);
+            display: flex;
+            flex-direction: column;
+            color:rgb(61, 60, 60);
+            font-family: $game;
+            &.red{
+                background-color: #fc9842;
+                background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+            }
+            &.green{
+                background-color: #70b2d9;
+                background-image: linear-gradient(315deg, #70b2d9 0%, #39e5b6 74%);
+            }
+            &.blue{
+                background-color: #045de9;
+                background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+            }
+            &.yellow{
+                background-color: #fbb034;
+                background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+            }
+            &.gray{
+                background: linear-gradient(to right, #a6aab0 0%, #747272 100%);
+            }
+            &.pink{
+                background-color: #e899dc;
+                background-image: linear-gradient(315deg, #e899dc 0%, #d387ab 74%);                
+            }
+            &.brown{
+                background-color: #772f1a;
+                background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);   
+            }
+            &.purple{
+                background-color: #2b1331;
+                background-image: linear-gradient(315deg, #2b1331 0%, #b9abcf 74%);
+            }
+            &.black{
+                color:$nameColor;
+                background-color: #485461;
+                background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);                
+            }
+        }
+        &-habitat{
+            margin-top: 10px;
+        }
+        &-height{
+            margin-top: 10px;
+        }
+        &-weight{
+            margin-top: 10px;
+        }
+        &-type{
+            .btn{
+                border-radius: 8px;
+                cursor: pointer;
+                padding: 5px 15px;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: $nameColor;
+                margin-left: 10px;
+                box-shadow: 0 0 5px 0px rgb(48, 47, 47);
+                transition: all ease-in-out 0.2s;
+                &.blue{
+                    background-color: rgb(0, 102, 255);  
+                }
+                &.red{
+                    background-color: rgb(238, 45, 45);  
+                }
+                &.green{
+                    background-color: rgb(23, 194, 23);
+                }
+                &.brown{
+                    background-color: rgb(167, 59, 59);
+                }
+                &.purple{
+                    background-color: rgb(165, 29, 165);
+                }
+                &.yellow{
+                    background-color: rgb(240, 167, 32);
+                }
+                &.pink{
+                    background-color: rgb(233, 159, 171);
+                }
+                &.gray{
+                    background-color: rgb(114, 107, 107);
+                }
+                &.white{
+                    background-color: rgb(197, 195, 195);
+                }
+                &.black{
+                    background-color: rgb(78, 75, 75);
+                }
+                &:hover{
+                    box-shadow: 0 0 5px 1px rgb(27, 27, 27);
+                }
+            }
+            margin-top: 10px;
+        }
+        &-exp{
+            margin-top: 10px;
+        }
+        &-rate{
+            margin-top: 10px;
+        }
+        &-skill{
+            margin-top: 10px;
+        }
+        &-egg{
+            margin-top: 10px;
+        }
+        &-color{
+            margin-top: 10px;
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-size: 18px;
+            font-family: $game;
+            img{
+                margin-left: 5px;
+                width: 70px;
+            }
+            
+        }
+        &-stat{
+            .group{
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                justify-content: space-between;
+                .statBar{
+                    height: 5px;
+                    overflow: hidden;
+                    width: 50%;
+                    box-shadow: 0 0 5px 2px rgb(36, 35, 35);
+                    .progress{
+                        height: 100%;
+                        background-color: #aff6cf;
+                        background-image: linear-gradient(315deg, #aff6cf 0%, #9f98e8 74%);
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 993px) {
+            grid-template-columns: 1fr;
+            column-gap: initial;
+            row-gap: 50px;
+          }
+        @media only screen and (max-width:700px){
+            &-left{
+                font-size: 14px;
+            }
+            &-right{
+                font-size: 14px;
+            }
+        }
+    }
+}

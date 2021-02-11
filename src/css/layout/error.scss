@@ -1,0 +1,36 @@
+.error{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 996;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1920px;
+    background-color: #1c1c1c;
+    // opacity: 0;
+    // visibility: hidden;
+    .animation{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        span{
+            font-family: $game;
+            color: $nameColor;
+            font-size: 16px;
+            margin-top: 14px;
+            letter-spacing: 2px;
+        }
+        .linkErr{
+            margin-top: 5px;
+            font-family: $game;
+            color: $nameColor;
+        }
+    }
+}

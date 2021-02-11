@@ -1,17 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import MainPoke from './Components/Mainpokemon'
+import Detail from './Components/Detailpokemon'
+import PokeCard from './Components/ChildComponents/PokeCard'
+import Header from './Components/Header'
+import Type from './Components/Type'
+import  './css/main.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class Main extends React.Component{
+  render(){
+    return (
+      <Router>
+        <div className="wrapper">
+          <Header/> 
+          <Switch>
+            <Route exact path="/"  component = {MainPoke} />
+            <Route  exact path="/:id"  render ={(props) => <Type  key={window.location.pathname}  {...props} />}/>
+            <Route exact path={["/pokemon/:id"]}  component ={Detail} />
+          </Switch>
+        </div>
+      </Router>
+    )
+  }
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<Main />,document.getElementById("root"))
+

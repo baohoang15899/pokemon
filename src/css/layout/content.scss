@@ -1,0 +1,69 @@
+.pokemon{
+    position: relative;
+    min-height: 100vh;
+    &__content{
+        padding-top: 60px;
+        padding-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        column-gap: 50px;
+        row-gap: 50px;
+        &-box{
+            animation: fade;
+            animation-duration: 2s;
+
+            @keyframes fade {
+                from{opacity: 0; }
+                to{opacity: 1; }
+            }
+        }
+        .boxDetail{
+            padding: 10px;
+            border-radius: 16px;
+            background-color: rgb(66, 63, 63);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 0 5px 0px rgb(182, 179, 179);
+        }
+        &-name{
+            font-family: $magic;
+            color: $nameColor;
+            margin: 10px 0px;
+            font-size: 16px;
+        }
+        .box-link{
+            display: flex;
+            align-items: center;
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            margin-top: 10px;
+        }
+        &-link{
+            color: $nameColor;
+            margin-left: 10px;
+            font-family: $game;
+            font-size: 16px;
+            transition: all ease-in-out 0.4s;
+            &:hover{
+                color: rgb(226, 9, 9);
+            }
+        }
+        @media only screen and (max-width: 1300px) {
+            grid-template-columns: repeat(4,1fr);
+          }
+          @media only screen and (max-width: 1000px) {
+            grid-template-columns: repeat(3,1fr);
+          }
+          @media only screen and (max-width: 700px) {
+            grid-template-columns: repeat(2,1fr);
+          }
+          @media only screen and (max-width: 480px) {
+            grid-template-columns: 1fr;
+            column-gap: initial;
+          }
+    }
+}

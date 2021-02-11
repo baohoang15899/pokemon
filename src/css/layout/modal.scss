@@ -1,0 +1,43 @@
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 997;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1920px;
+    background-color: #1c1c1c;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in-out 0.4s;
+    .animation{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        span{
+            font-family: $game;
+            color: $nameColor;
+            font-size: 16px;
+            margin-top: 14px;
+            letter-spacing: 2px;
+        }
+        img{
+            width: 80px;
+            animation: ball;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 5s;
+            @keyframes ball {
+                from{transform: rotate(0deg)}
+                to{transform: rotate(360deg);}
+            }
+        }
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;
+    }
+}

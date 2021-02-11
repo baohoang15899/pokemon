@@ -1,0 +1,34 @@
+.search{
+    &__content{
+        padding-top: 160px;
+        form{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        button{
+            background: rgb(201, 61, 61);
+            border: none;
+            outline: none;
+            font-family: $game;
+            transition: all ease-in-out 0.4s;
+            padding: 10px 35px;
+            .button{
+                color: $nameColor;
+                text-transform: uppercase;
+            }
+            &:hover{
+                background:rgb(235, 68, 68) ;
+            }
+        }
+        input{
+            padding: 0px 5px;
+            width: 90%;
+            outline: none;
+            border: none;
+            color: white;
+            background-color: transparent;
+            border-bottom: 2px solid rgb(201, 61, 61);
+        }
+    }
+}
