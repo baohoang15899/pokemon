@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/baohoang15899.github.io/pokemon/static/css/main.f4dcdb26.chunk.css",
+    "main.js": "/baohoang15899.github.io/pokemon/static/js/main.cb984243.chunk.js",
+    "main.js.map": "/baohoang15899.github.io/pokemon/static/js/main.cb984243.chunk.js.map",
+    "runtime-main.js": "/baohoang15899.github.io/pokemon/static/js/runtime-main.e8bc8a67.js",
+    "runtime-main.js.map": "/baohoang15899.github.io/pokemon/static/js/runtime-main.e8bc8a67.js.map",
+    "static/js/2.ce9d94bc.chunk.js": "/baohoang15899.github.io/pokemon/static/js/2.ce9d94bc.chunk.js",
+    "static/js/2.ce9d94bc.chunk.js.map": "/baohoang15899.github.io/pokemon/static/js/2.ce9d94bc.chunk.js.map",
+    "index.html": "/baohoang15899.github.io/pokemon/index.html",
+    "static/css/main.f4dcdb26.chunk.css.map": "/baohoang15899.github.io/pokemon/static/css/main.f4dcdb26.chunk.css.map",
+    "static/js/2.ce9d94bc.chunk.js.LICENSE.txt": "/baohoang15899.github.io/pokemon/static/js/2.ce9d94bc.chunk.js.LICENSE.txt",
+    "static/media/logo.21505690.png": "/baohoang15899.github.io/pokemon/static/media/logo.21505690.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8bc8a67.js",
+    "static/js/2.ce9d94bc.chunk.js",
+    "static/css/main.f4dcdb26.chunk.css",
+    "static/js/main.cb984243.chunk.js"
+  ]
+}
