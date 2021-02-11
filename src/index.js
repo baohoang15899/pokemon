@@ -7,7 +7,7 @@ import Header from './Components/Header'
 import Type from './Components/Type'
 import  './css/main.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -21,7 +21,7 @@ class Main extends React.Component{
           <Header/> 
           <Switch>
             <Route exact path="/"  component = {MainPoke} />
-            <Route  exact path="/:id"  render ={(props) => <Type  key={window.location.pathname}  {...props} />}/>
+            <Route  exact path="/:id"  component ={(props) => <Type  key={window.location.hash}  {...props} />}/>
             <Route exact path={["/pokemon/:id"]}  component ={Detail} />
           </Switch>
         </div>
