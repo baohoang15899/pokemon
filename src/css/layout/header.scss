@@ -66,6 +66,12 @@
                         color: #ee5253;
                     }
                 }
+                @media screen and (max-width: 614px) {
+
+                        padding-left: 15px;
+                        padding-right: 15px;
+ 
+                  }
             }
             &:hover .subMenu{
                 opacity: 1;
@@ -86,5 +92,27 @@
             font-family: $game;
             color: $nameColor;
         }
+        @media screen and (max-width: 400px) {
+            flex-wrap: wrap;
+            &-menu{
+                flex-basis: 100%;
+                margin-left: initial;
+            }
+            &-item{
+                margin-top: 10px;
+                span{
+                    font-size: 14px;
+                    margin-left: initial;
+                }
+                .space{
+                    margin-left: 10px;
+                }
+                .subMenu{
+                    .link{
+                        font-size: 14px;
+                    }
+                }
+            }
+          }
     }
 }

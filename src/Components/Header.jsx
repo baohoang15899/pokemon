@@ -12,7 +12,7 @@ export default function Header(params) {
                         <Link to="/" className="header__content-link"><span>Home</span></Link>
                         </li>
                         <li className="header__content-item">
-                            <span>
+                            <span className="space">
                                 Type
                             </span>
                             <ul className="subMenu">

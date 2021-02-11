@@ -123,6 +123,10 @@ button {
           transition: all ease-in-out 0.2s; }
           .header__content-item .subMenu .link:hover {
             color: #ee5253; }
+        @media screen and (max-width: 614px) {
+          .header__content-item .subMenu {
+            padding-left: 15px;
+            padding-right: 15px; } }
       .header__content-item:hover .subMenu {
         opacity: 1;
         visibility: visible; }
@@ -136,6 +140,21 @@ button {
       color: #ece7e7; }
       .header__content-link:hover {
         color: #4d4b49; }
+    @media screen and (max-width: 400px) {
+      .header__content {
+        flex-wrap: wrap; }
+        .header__content-menu {
+          flex-basis: 100%;
+          margin-left: initial; }
+        .header__content-item {
+          margin-top: 10px; }
+          .header__content-item span {
+            font-size: 14px;
+            margin-left: initial; }
+          .header__content-item .space {
+            margin-left: 10px; }
+          .header__content-item .subMenu .link {
+            font-size: 14px; } }
 
 .modal {
   position: fixed;
