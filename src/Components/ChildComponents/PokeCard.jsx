@@ -25,7 +25,7 @@ export default class PokeCard extends React.Component{
                     </div>
                     <div className ="box-link" >
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.props.poke.id}.png`} onError= {this.onLoad}  alt=""/>
-                        <Link to={`pokemon/${this.props.poke.id}`}className="pokemon__content-link">More Info</Link>
+                        <Link to={`poke/${this.props.poke.id}`}className="pokemon__content-link">More Info</Link>
                     </div>
                 </div>
                 }

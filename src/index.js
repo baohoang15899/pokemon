@@ -22,7 +22,7 @@ class Main extends React.Component{
           <Switch>
             <Route exact path="/"  component = {MainPoke} />
             <Route  exact path="/:id"  component ={(props) => <Type  key={window.location.hash}  {...props} />}/>
-            <Route exact path={["/pokemon/:id"]}  component ={Detail} />
+            <Route exact path="/poke/:id"  component ={Detail} />
           </Switch>
         </div>
       </Router>

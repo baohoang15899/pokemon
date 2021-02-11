@@ -15,7 +15,7 @@ export default class Search extends React.Component{
 
     onChange(e){
         let value = e.target.value.toLowerCase().trim("")   
-        const link = `pokemon/${value}`
+        const link = `poke/${value}`
         if (value.length > 1) {
             this.setState({url:link})
         }
