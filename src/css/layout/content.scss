@@ -1,6 +1,23 @@
 .pokemon{
     position: relative;
     min-height: 100vh;
+    .loadMore{
+        text-align: center;
+        margin: 40px 0px;
+        button{
+            padding: 12px 36px;
+            background-color: rgb(236, 31, 31);
+            color: $nameColor;
+            font-family: $game;
+            border: none;
+            transition: all ease-in-out 0.2s;
+            outline: none;
+            text-transform: uppercase;
+            &:hover{
+                background-color: rgb(211, 46, 46);
+            }
+        }
+    }
     &__content{
         padding-top: 60px;
         padding-bottom: 50px;
@@ -8,24 +25,48 @@
         grid-template-columns: repeat(6,1fr);
         column-gap: 50px;
         row-gap: 50px;
-        &-box{
-            animation: fade;
-            animation-duration: 2s;
-
-            @keyframes fade {
-                from{opacity: 0; }
-                to{opacity: 1; }
-            }
-        }
         .boxDetail{
             padding: 10px;
             border-radius: 16px;
             background-color: rgb(66, 63, 63);
             display: flex;
             align-items: center;
+            position: relative;
             justify-content: center;
             flex-direction: column;
             box-shadow: 0 0 5px 0px rgb(182, 179, 179);
+            min-height: 270px;
+            img{
+            animation: fade;
+            animation-duration: 1s;
+
+            @keyframes fade {
+                from{opacity: 0.3; }
+                to{opacity: 1; }
+            }
+            }
+            .imgLoad{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                min-height: 160px;
+                .spinner {
+                    width: 60px;
+                    transition: all ease-in-out 0.2s;
+                    height: 60px;
+                    border: 4px solid rgba(255,255,255,.3);
+                    border-radius: 50%;
+                    border-top-color: rgb(235, 62, 62);
+                    animation: spin 1s ease-in-out infinite;
+                    @keyframes spin {
+                        to { transform: rotate(360deg); }
+                      }
+                  }
+                  &.hide{
+                    display: none;
+                 } 
+            }
         }
         &-name{
             font-family: $magic;

@@ -199,6 +199,20 @@ button {
 .pokemon, .PokeDetail {
   position: relative;
   min-height: 100vh; }
+  .pokemon .loadMore, .PokeDetail .loadMore {
+    text-align: center;
+    margin: 40px 0px; }
+    .pokemon .loadMore button, .PokeDetail .loadMore button {
+      padding: 12px 36px;
+      background-color: #ec1f1f;
+      color: #ece7e7;
+      font-family: "Tomorrow", sans-serif;
+      border: none;
+      transition: all ease-in-out 0.2s;
+      outline: none;
+      text-transform: uppercase; }
+      .pokemon .loadMore button:hover, .PokeDetail .loadMore button:hover {
+        background-color: #d32e2e; }
   .pokemon__content {
     padding-top: 60px;
     padding-bottom: 50px;
@@ -206,23 +220,44 @@ button {
     grid-template-columns: repeat(6, 1fr);
     column-gap: 50px;
     row-gap: 50px; }
-    .pokemon__content-box {
-      animation: fade;
-      animation-duration: 2s; }
-@keyframes fade {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
     .pokemon__content .boxDetail {
       padding: 10px;
       border-radius: 16px;
       background-color: #423f3f;
       display: flex;
       align-items: center;
+      position: relative;
       justify-content: center;
       flex-direction: column;
-      box-shadow: 0 0 5px 0px #b6b3b3; }
+      box-shadow: 0 0 5px 0px #b6b3b3;
+      min-height: 270px; }
+      .pokemon__content .boxDetail img {
+        animation: fade;
+        animation-duration: 1s; }
+@keyframes fade {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
+      .pokemon__content .boxDetail .imgLoad {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-height: 160px; }
+        .pokemon__content .boxDetail .imgLoad .spinner {
+          width: 60px;
+          transition: all ease-in-out 0.2s;
+          height: 60px;
+          border: 4px solid rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          border-top-color: #eb3e3e;
+          animation: spin 1s ease-in-out infinite; }
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
+        .pokemon__content .boxDetail .imgLoad.hide {
+          display: none; }
     .pokemon__content-name {
       font-family: "Yusei Magic", sans-serif;
       color: #ece7e7;

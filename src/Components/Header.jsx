@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import Logo from '../img/logo.png'
-export default function Header(params) {
+export default function Header() {
     return(
         <div className="header">
             <div className="container">

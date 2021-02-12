@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PokeCard from "./ChildComponents/PokeCard"
 import Modal from "./ChildComponents/Modal"
-import { unmountComponentAtNode } from 'react-dom';
 import Search from "./Search"
 import Error from "./ChildComponents/Error"
 
@@ -30,12 +29,10 @@ export default class Type extends React.Component{
         this.status = false
     }
 
-
     async getApi(){
         const id = this.props.match.params.id
         const api = await fetch(`https://pokeapi.co/api/v2/type/${id}`)
         if (api.ok) {
-
             const poke = await api.json()
             const data = poke.pokemon
             this.setState({pokemon: data,
@@ -48,8 +45,6 @@ export default class Type extends React.Component{
             console.log("Connection not found");
         }
     }
-
-
 
     render(){
         const output = this.state.pokemon.map((pokemon,i)=>{
