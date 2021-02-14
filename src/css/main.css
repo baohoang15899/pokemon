@@ -154,7 +154,7 @@ button {
           .header__content-item .space {
             margin-left: 10px; }
           .header__content-item .subMenu .link {
-            font-size: 14px; } }
+            font-size: 12px; } }
 
 .modal {
   position: fixed;
@@ -201,8 +201,13 @@ button {
   min-height: 100vh; }
   .pokemon .loadMore, .PokeDetail .loadMore {
     text-align: center;
-    margin: 40px 0px; }
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse; }
     .pokemon .loadMore button, .PokeDetail .loadMore button {
+      margin: 0px 10px;
       padding: 12px 36px;
       background-color: #ec1f1f;
       color: #ece7e7;
@@ -272,12 +277,15 @@ button {
         height: 50px; }
     .pokemon__content-link {
       color: #ece7e7;
-      margin-left: 10px;
+      margin-left: 5px;
       font-family: "Tomorrow", sans-serif;
       font-size: 16px;
-      transition: all ease-in-out 0.4s; }
+      transition: all ease-in-out 0.4s;
+      padding: 5px 20px;
+      border-radius: 8px;
+      background-color: #e73c3c; }
       .pokemon__content-link:hover {
-        color: #e20909; }
+        background-color: #ce3a3a; }
     @media only screen and (max-width: 1300px) {
       .pokemon__content {
         grid-template-columns: repeat(4, 1fr); } }
@@ -388,6 +396,38 @@ button {
       background-image: linear-gradient(315deg, #485461 0%, #28313b 74%); }
   .PokeDetail__content-habitat {
     margin-top: 10px; }
+    .PokeDetail__content-habitat .btn {
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 5px 15px;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: #ece7e7;
+      margin-left: 10px;
+      box-shadow: 0 0 5px 0px #302f2f;
+      transition: all ease-in-out 0.2s; }
+      .PokeDetail__content-habitat .btn.blue {
+        background-color: #0066ff; }
+      .PokeDetail__content-habitat .btn.red {
+        background-color: #ee2d2d; }
+      .PokeDetail__content-habitat .btn.green {
+        background-color: #17c217; }
+      .PokeDetail__content-habitat .btn.brown {
+        background-color: #a73b3b; }
+      .PokeDetail__content-habitat .btn.purple {
+        background-color: #a51da5; }
+      .PokeDetail__content-habitat .btn.yellow {
+        background-color: #f0a720; }
+      .PokeDetail__content-habitat .btn.pink {
+        background-color: #e99fab; }
+      .PokeDetail__content-habitat .btn.gray {
+        background-color: #726b6b; }
+      .PokeDetail__content-habitat .btn.white {
+        background-color: #a19f9f; }
+      .PokeDetail__content-habitat .btn.black {
+        background-color: #4e4b4b; }
+      .PokeDetail__content-habitat .btn:hover {
+        box-shadow: 0 0 5px 1px #1b1b1b; }
   .PokeDetail__content-height {
     margin-top: 10px; }
   .PokeDetail__content-weight {
@@ -421,7 +461,7 @@ button {
       .PokeDetail__content-type .btn.gray {
         background-color: #726b6b; }
       .PokeDetail__content-type .btn.white {
-        background-color: #c5c3c3; }
+        background-color: #a19f9f; }
       .PokeDetail__content-type .btn.black {
         background-color: #4e4b4b; }
       .PokeDetail__content-type .btn:hover {

@@ -118,6 +118,50 @@
         }
         &-habitat{
             margin-top: 10px;
+            .btn{
+                border-radius: 8px;
+                cursor: pointer;
+                padding: 5px 15px;
+                text-transform: uppercase;
+                font-size: 16px;
+                color: $nameColor;
+                margin-left: 10px;
+                box-shadow: 0 0 5px 0px rgb(48, 47, 47);
+                transition: all ease-in-out 0.2s;
+                &.blue{
+                    background-color: rgb(0, 102, 255);  
+                }
+                &.red{
+                    background-color: rgb(238, 45, 45);  
+                }
+                &.green{
+                    background-color: rgb(23, 194, 23);
+                }
+                &.brown{
+                    background-color: rgb(167, 59, 59);
+                }
+                &.purple{
+                    background-color: rgb(165, 29, 165);
+                }
+                &.yellow{
+                    background-color: rgb(240, 167, 32);
+                }
+                &.pink{
+                    background-color: rgb(233, 159, 171);
+                }
+                &.gray{
+                    background-color: rgb(114, 107, 107);
+                }
+                &.white{
+                    background-color: rgb(161, 159, 159);
+                }
+                &.black{
+                    background-color: rgb(78, 75, 75);
+                }
+                &:hover{
+                    box-shadow: 0 0 5px 1px rgb(27, 27, 27);
+                }
+            }
         }
         &-height{
             margin-top: 10px;
@@ -161,7 +205,7 @@
                     background-color: rgb(114, 107, 107);
                 }
                 &.white{
-                    background-color: rgb(197, 195, 195);
+                    background-color: rgb(161, 159, 159);
                 }
                 &.black{
                     background-color: rgb(78, 75, 75);

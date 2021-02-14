@@ -30,7 +30,8 @@ export default class Type extends React.Component{
     }
 
     async getApi(){
-        const id = this.props.match.params.id
+        const id = this.props.match.params.name
+        console.log(this.props.match);
         const api = await fetch(`https://pokeapi.co/api/v2/type/${id}`)
         if (api.ok) {
             const poke = await api.json()

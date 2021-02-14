@@ -109,7 +109,7 @@ export default class MainPokemon extends React.Component{
                             </div>
                             <div className="PokeDetail__content-type">
                                 <span>Type: { this.state.type.map((type,i)=>{
-                                        return <Link to={`/${type.type.name}`}  className={`btn ${ this.state.color ? this.state.color : ""} ` } key={i}>{type.type.name}</Link>
+                                        return <Link to={`/type/${type.type.name}`}  className={`btn ${ this.state.color ? this.state.color : ""} ` } key={i}>{type.type.name}</Link>
                                     })}</span>
                             </div>
                             <div className="PokeDetail__content-color">
@@ -125,7 +125,7 @@ export default class MainPokemon extends React.Component{
                                 <span>Base exp: { this.state.exp}</span>
                             </div>
                             <div className="PokeDetail__content-habitat">
-                                <span>Habitat: { this.state.habitat ? this.state.habitat.name : "???"}</span>
+                                <span>Habitat: { this.state.habitat ? <Link to={`/habitat/${this.state.habitat.name}`} className= {`btn ${ this.state.color ? this.state.color : ""} ` }> {this.state.habitat.name}  </Link>  : "???"}</span>
                             </div>
                             <div className="PokeDetail__content-rate">
                                 <span>Capture rate: { this.state.capture}%</span>

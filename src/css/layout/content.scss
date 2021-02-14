@@ -4,7 +4,12 @@
     .loadMore{
         text-align: center;
         margin: 40px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
         button{
+            margin: 0px 10px;
             padding: 12px 36px;
             background-color: rgb(236, 31, 31);
             color: $nameColor;
@@ -85,12 +90,15 @@
         }
         &-link{
             color: $nameColor;
-            margin-left: 10px;
+            margin-left: 5px;
             font-family: $game;
             font-size: 16px;
             transition: all ease-in-out 0.4s;
+            padding: 5px 20px;
+            border-radius: 8px;
+            background-color: rgb(231, 60, 60);
             &:hover{
-                color: rgb(226, 9, 9);
+                background-color: rgb(206, 58, 58);
             }
         }
         @media only screen and (max-width: 1300px) {

@@ -4,18 +4,16 @@ import Modal from "./ChildComponents/Modal"
 import Search from "./Search"
 import Error from "./ChildComponents/Error"
 
-export default class MainPokemon extends React.Component{
+export default class Habitat extends React.Component{
     constructor(){
         super()
         this.state = {
+            id:[],
             status:true,
             isLoading:false,
             pokemon:[],
-            connection:false,
-            page:localStorage.getItem("pokemonPage") !== null ? JSON.parse(localStorage.getItem("pokemonPage")) : 40
+            connection:false
         }
-        this.onClick = this.onClick.bind(this)
-        this.deClick = this.deClick.bind(this)
     }
 
     componentDidMount(){
@@ -30,37 +28,14 @@ export default class MainPokemon extends React.Component{
         this.status = false
     }
 
-    checkPage(step){
-        let newPage =  this.state.page + step
-        if (newPage<40) {
-            return newPage = 40 
-        }
-        return newPage 
-    }
-
-
-    deClick(){
-        this.setState({ page:this.checkPage(-20)}
-        ,()=>{
-            localStorage.setItem("pokemonPage",JSON.stringify(this.state.page))
-            this.getApi()
-        })
-    }
-
-    onClick(){
-        this.setState({page:this.checkPage(20)},
-        ()=>{
-            localStorage.setItem("pokemonPage",JSON.stringify(this.state.page))
-            this.getApi()
-        })
-    }
-
     async getApi(){
-        const api = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${this.state.page}`)
+        const id = this.props.match.params
+        const api = await fetch(`https://pokeapi.co/api/v2/pokemon-habitat/${id.id}`)
         if (api.ok) {
             const poke = await api.json()
-            const data = poke.results
+            const data = poke.pokemon_species
             this.setState({pokemon: data,
+                            id: data.map(pokemon=> pokemon.url.split("/")).map(id=> id[6]),
                             isLoading:false,
                             connection:true})
         }
@@ -70,11 +45,9 @@ export default class MainPokemon extends React.Component{
         }
     }
 
-
-
     render(){
         const output = this.state.pokemon.map((pokemon,i)=>{
-            return <PokeCard key={i+1} poke = { {name:pokemon.name, id:i+1 }} />
+            return <PokeCard key={this.state.id[i]} poke = { {name:pokemon.name, id:this.state.id[i] }} />
         })
         return(
             <div className="pokemon">
@@ -84,10 +57,6 @@ export default class MainPokemon extends React.Component{
                     <Search />
                     <div className="pokemon__content">
                         {(output)}
-                    </div>
-                    <div className="loadMore">
-                            <button onClick = {this.onClick}>Load more</button>
-                            <button onClick = {this.deClick}>Load less</button>
                     </div>
                 </div>
                 :  
