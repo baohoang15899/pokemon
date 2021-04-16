@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 import Modal from "./ChildComponents/Modal"
 import Error from "./ChildComponents/Error"
 import { Link } from 'react-router-dom';

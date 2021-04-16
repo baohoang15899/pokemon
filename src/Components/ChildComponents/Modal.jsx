@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {  } from 'react';
 import img from '../../img/logo.png'
 export default class Modal extends React.Component{
     render(){

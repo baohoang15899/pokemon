@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import PokeCard from "./ChildComponents/PokeCard"
 import Modal from "./ChildComponents/Modal"
 import Search from "./Search"

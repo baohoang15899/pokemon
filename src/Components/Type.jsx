@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import PokeCard from "./ChildComponents/PokeCard"
 import Modal from "./ChildComponents/Modal"
 import Search from "./Search"
@@ -25,13 +25,11 @@ export default class Type extends React.Component{
     }
 
     componentWillUnmount(){
-        console.log("BYE");
         this.status = false
     }
 
     async getApi(){
         const id = this.props.match.params.name
-        console.log(this.props.match);
         const api = await fetch(`https://pokeapi.co/api/v2/type/${id}`)
         if (api.ok) {
             const poke = await api.json()
